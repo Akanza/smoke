@@ -1,0 +1,17 @@
+{
+    "name": "smoke/php",
+    "description": "small and removable php mini-framework",
+    "authors": [
+        {
+            "name": "Jose Amani",
+            "email": "amani.jose@outlook.fr"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files" : [
+            "src/core/smoke.php",
+            "src/core/functions.php"
+        ]
+    }
+}
