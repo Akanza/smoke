@@ -16,52 +16,52 @@ Routes combine
 * with an URL matching pattern 
 * and a callback parameter
 
-get('/', 'get_function');
-function get_function()
-{
-    // Show something
-    // with the code of this callback controller
-}
+    get('/', 'get_function');
+    function get_function()
+    {
+        // Show something
+        // with the code of this callback controller
+    }
 
-post('/', 'post_function');
-function post_function()
-{
-    // Show something
-    // with the code of this callback controller
-}
+    post('/', 'post_function');
+    function post_function()
+    {
+        // Show something
+        // with the code of this callback controller
+    }
 
-put('/', 'put_function');
-function put_function()
-{
-    // Show something
-    // with the code of this callback controller
-}
+    put('/', 'put_function');
+    function put_function()
+    {
+        // Show something
+        // with the code of this callback controller
+    }
 
 ### Routing patterns and parameters ###
 
 * matching numeric parameters
 
-get('/post/:num', 'post');
-function post($num)
-{
-	echo "this is post $num";
-}
+    get('/post/:num', 'post');
+    function post($num)
+    {
+        echo "this is post $num";
+    }
 
 * matching alphanumeric parameters
 
-get('/post/:alpha', 'post');
-function post($var)
-{
-	echo "this is post $var";
-}
+    get('/post/:alpha', 'post');
+    function post($var)
+    {
+        echo "this is post $var";
+    }
 
 * matching any format of parameters
 
-get('/post/:any', 'post');
-function post($var)
-{
-	echo "this is post $var";
-}
+    get('/post/:any', 'post');
+    function post($var)
+    {
+        echo "this is post $var";
+    }
 
 ## Views and templates ##
 
@@ -70,11 +70,11 @@ Views files are located by default in `/app/templates/` folder.
 
 * display a view
 
-get('/about', 'about');
-function about()
-{
-	view('apropos',[],'default');
-}
+    get('/about', 'about');
+    function about()
+    {
+        view('apropos',[],'default');
+    }
 
 > first parameter   : name of views
 
@@ -86,33 +86,33 @@ function about()
 
 Layout files are located by default in `/app/templates/layouts/` folder.
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Layout</title>
-</head>
-<body>
-<?= $content ?>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Layout</title>
+    </head>
+    <body>
+    <?= $content ?>
+    </body>
+    </html>
 
 ## SESSION AND FLASH ##
 
 * Create a session var
 
-session('create','key','value');
+    session('create','key','value');
 
 * Get a session var 
 
-session('get','key');
+    session('get','key');
 
 * Delete a session var
 
-session('delete','key');
+    session('delete','key');
 
 * Update a session var
 
-session('put','key','new value');
+    session('put','key','new value');
 
 ### FLASH MESSAGE ###
 
@@ -134,24 +134,24 @@ flash_create('Well done !!','success');
 
 * img
 
-echo img('image1.jpg',['style' => 'border: solid 1px red;']);
+    echo img('image1.jpg',['style' => 'border: solid 1px red;']);
 
 * link
 
-echo url('about','about page' , ['class' => 'link_red']);
+    echo url('about','about page' , ['class' => 'link_red']);
 
 * css 
-
-echo css('bootstrap.css');
+    
+    echo css('bootstrap.css');
 
 or
 
-echo css(['bootstrap.css' , 'style.css']);
+    echo css(['bootstrap.css' , 'style.css']);
 
 * js 
 
-echo js('bootstrap.js');
+    echo js('bootstrap.js');
 
 or
 
-echo js(['bootstrap.js' , 'style.js']);
+    echo js(['bootstrap.js' , 'style.js']);
